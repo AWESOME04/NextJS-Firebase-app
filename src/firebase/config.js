@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCVyY_lxgBhJzcT1kA5JcDdLDpZ45HUavc",
-    authDomain: "full-stack-app-104c3.firebaseapp.com",
-    projectId: "full-stack-app-104c3",
-    storageBucket: "full-stack-app-104c3.appspot.com",
-    messagingSenderId: "726747568315",
-    appId: "1:726747568315:web:4b4975f51aaa11560d319e"
+    apiKey: "AIzaSyD8zjjPs3qclOVEhAvwmOfl8GuPxh_Ra-I",
+    authDomain: "nextjs-app-607ee.firebaseapp.com",
+    projectId: "nextjs-app-607ee",
+    storageBucket: "nextjs-app-607ee.appspot.com",
+    messagingSenderId: "285972623903",
+    appId: "1:285972623903:web:30db20bc41500170bc1b2a"
 };
 
 // Initialize Firebase

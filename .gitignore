@@ -6,6 +6,9 @@
 .pnp.js
 .yarn/install-state.gz
 
+get_code_context.sh
+code_context.txt
+
 # testing
 /coverage
 
