@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import signUp from '@/firebase/auth/signup';
+import Link from 'next/link';
 
 export default function SignupPage() {
     const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ export default function SignupPage() {
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="max-w-md w-full px-6 py-8 bg-white rounded-lg shadow-md">
-                <h1 className="text-3xl font-bold text-center mb-6">Sign Up</h1>
+                <h1 className="text-4xl font-bold text-center mb-8 text-indigo-600">Sign Up</h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
@@ -32,7 +33,7 @@ export default function SignupPage() {
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-100 text-gray-700"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-100 text-gray-700"
                             required
                         />
                     </div>
@@ -45,17 +46,23 @@ export default function SignupPage() {
                             id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-100 text-gray-700"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-gray-100 text-gray-700"
                             required
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300"
+                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300"
                     >
                         Sign Up
                     </button>
                 </form>
+                <p className="mt-4 text-center text-gray-600">
+                    Already have an account?{' '}
+                    <Link href="/signin" className="text-indigo-600 font-bold">
+                        Log In
+                    </Link>
+                </p>
             </div>
         </div>
     );
